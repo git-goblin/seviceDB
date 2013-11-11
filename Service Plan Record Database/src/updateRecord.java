@@ -231,16 +231,16 @@ public void DBConnect()
 	String get_Var_invoiceTotal = invoiceTotal.getText(); 
 	String get_Var_numberOfServices = numberOfServices.getText();
     
-    String SQL = "INSTERT INTO records (title, firstName, surName, customerAddress1, customerAddress2, postCode, carRegistration, carModel, dateSoldField, invoiceNumber, soldBy, salesBranch, type, paymentMethod, VATrate, totalPrice, VAT, invoiceTotal, numberOfServices) VALUES ("'"+get_Var_title+"'", "'"+get_Var_firstName+"'", "'"+get_Var_surName+"'", "'"+get_Var_customerAddress1+"'", "'"+get_Var_customerAddress2+"'", "'"+get_Var_postCode+"'", "'"+get_Var_carRegistration+"'", "'"+get_Var_carModel+"'", "'"+get_Var_dateSoldField+"'", "'"+get_Var_invoiceNumber+"'", "'"+get_Var_soldBy+"'", "'"+get_Var_salesBranch+"'", "'"+get_Var_type+"'", "'"+get_Var_paymentMethod+"'", "'"+get_Var_VATrate+"'", "'"+get_Var_totalPrice+"'", "'"+get_Var_VAT+"'", "'"+get_Var_invoiceTotal+"'", "'"+get_Var_numberOfServices+"'")"";
+    String SQL = "INSTERT INTO records (title, firstName, surName, customerAddress1, customerAddress2, postCode, carRegistration, carModel, dateSoldField, invoiceNumber, soldBy, salesBranch, type, paymentMethod, VATrate, totalPrice, VAT, invoiceTotal, numberOfServices) VALUES ("'"+get_Var_title+"'", "'"+get_Var_firstName+"'", "'"+get_Var_surName+"'", "'"+get_Var_customerAddress1+"'", "'"+get_Var_customerAddress2+"'", "'"+get_Var_postCode+"'", "'"+get_Var_carRegistration+"'", "'"+get_Var_carModel+"'", "'"+get_Var_dateSoldField+"'", "'"+get_Var_invoiceNumber+"'", "'"+get_Var_soldBy+"'", "'"+get_Var_salesBranch+"'", "'"+get_Var_type+"'", "'"+get_Var_paymentMethod+"'", "'"+get_Var_VATrate+"'", "'"+get_Var_totalPrice+"'", "'"+get_Var_VAT+"'", "'"+get_Var_invoiceTotal+"'", "'"+get_Var_numberOfServices+"'")";
     ResultSet rs = stmt.executeQuery(SQL); 
-   rs.updateRow();
+    rs.updateRow();
     {
-    	     rs.updateString("title" get_Var_title);	
+    	         rs.updateString("title" get_Var_title);	
     		 rs.updateString("firstName" get_Var_firstName);  
     		 rs.updateString("surName" get_Var_surName);
     		 rs.updateString("customerAddress1" get_Var_customerAddress1);
     		 rs.updateString("customerAddress2" get_Var_customerAddress2);  
-    	     rs.updateString("postCode" get_Var_postCode);
+    	         rs.updateString("postCode" get_Var_postCode);
     		 rs.updateString("carRegistration" get_Var_carRegistration);
     		 rs.updateString("carModel" get_Var_carModel);
     		 rs.updateString("dateSoldField" get_Var_dateSoldField);
@@ -255,7 +255,7 @@ public void DBConnect()
     		 rs.updateString("invoiceTotal" get_Var_invoiceTotal); 
     		 rs.updateString("numberOfServices" get_Var_numberOfServices);	
     }
-   JOptionPane.showMessageDialog(null, "Record Updated!");
+   	JOptionPane.showMessageDialog(null, "Record Updated!");
     }
    
     catch (SQLException err)
